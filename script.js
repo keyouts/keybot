@@ -33,16 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function generateResponse(command) {
     const cmd = command.toLowerCase();
     switch (cmd) {
-      case 'hello':
-        return '👾 DevBot: Hi there. Need a website? I build pixels for breakfast.';
       case 'list-services':
         return 'KeyBot: Web Dev • UI Design • Branding • SEO';
-      case 'joke':
-        return 'KeyBot: You can contact us via the blue \"Get A Quote\" terminal on the homepage.';
       case 'help':
         return 'KeyBot: Available commands: hello, list-services, joke, contact, help';
       default:
-        return '👾 DevBot: Unknown command. Try \"help\" for options.';
+        return 'KeyBot: Unknown command. Try \"help\" for options.';
     }
   }
 });
