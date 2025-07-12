@@ -35,7 +35,6 @@
   animation: frameBlink 2.5s infinite;
 }
 
-/* === Title Bar === */
 .devbot-title-bar {
   background: #1470AF;
   color: white;
@@ -84,7 +83,6 @@
   outline: none;
 }
 
-/* === Blinking Cursor Animation === */
 .blinking-cursor::after {
   content: "_";
   animation: blink 1s steps(2, start) infinite;
