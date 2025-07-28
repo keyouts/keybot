@@ -44,7 +44,7 @@ function generateResponse(command) {
     case 'SEO':
       return 'KeyBot: Want help with your SEO? We assist in improving user experience and providing technical SEO support.';
     case 'help':
-      return 'KeyBot: Available commands: hello, list-services, joke, contact, help';
+      return 'KeyBot: Available commands: eCommerce, Design, Widgets, SEO';
     default:
       return 'KeyBot: Unknown command. Try "help" for options.';
   }
