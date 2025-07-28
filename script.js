@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.getElementById('toggleChat');
   const chatWindow = document.getElementById('devbot-window');
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('user-input');
+  const output = document.getElementById('chat-output');
 
   toggleButton.addEventListener('click', () => {
     toggleButton.remove();
     chatWindow.classList.remove('hidden');
-  });
+    input.focus();
 
-  const form = document.getElementById('chat-form');
-  const input = document.getElementById('user-input');
-  const output = document.getElementById('chat-output');
+    const welcomeLine = document.createElement('div');
+    welcomeLine.className = 'bot-line';
+    output.appendChild(welcomeLine);
+
+    typeText(welcomeLine, 'KeyBot: Type "help" for available commands.', 40);
+  });
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -21,11 +27,19 @@ document.addEventListener('DOMContentLoaded', function () {
     userLine.textContent = `> ${userText}`;
     output.appendChild(userLine);
 
+    const typingIndicator = document.createElement('div');
+    typingIndicator.className = 'bot-line';
+    typingIndicator.textContent = 'KeyBot is typing...';
+    output.appendChild(typingIndicator);
+
     const botLine = document.createElement('div');
     botLine.className = 'bot-line';
     output.appendChild(botLine);
 
-    typeText(botLine, generateResponse(userText), 40);
+    setTimeout(() => {
+      typingIndicator.remove();
+      typeText(botLine, generateResponse(userText), 40);
+    }, 600);
 
     input.value = '';
     output.scrollTop = output.scrollHeight;
