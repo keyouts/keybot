@@ -48,14 +48,24 @@ document.addEventListener('DOMContentLoaded', function () {
     switch (cmd) {
       case 'list-services':
         return 'KeyBot: Design • eCommerce • Widgets • SEO';
+      case 'eCommerce':
+        return 'KeyBot: We provide assistance with setting up eCommerce sites, and migrating data to third party platforms like eBay and Etsy to reach more customers.';
       case 'ecommerce':
         return 'KeyBot: We provide assistance with setting up eCommerce sites, and migrating data to third party platforms like eBay and Etsy to reach more customers.';
+      case 'Design':
+        return 'KeyBot: Looking to make your site design cohesive with your brand? We assist with front end development.';
       case 'design':
         return 'KeyBot: Looking to make your site design cohesive with your brand? We assist with front end development.';
+      case 'Widgets':
+        return 'KeyBot: Have a widget idea? We can design customized widgets for your site.';
       case 'widgets':
         return 'KeyBot: Have a widget idea? We can design customized widgets for your site.';
+      case 'SEO':
+        return 'KeyBot: Want help with your SEO? We assist in improving user experience and providing technical SEO support.';
       case 'seo':
         return 'KeyBot: Want help with your SEO? We assist in improving user experience and providing technical SEO support.';
+      case 'Help':
+        return 'KeyBot: Available commands: eCommerce, Design, Widgets, SEO';
       case 'help':
         return 'KeyBot: Available commands: eCommerce, Design, Widgets, SEO';
       default:
