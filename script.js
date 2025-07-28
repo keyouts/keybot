@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     chatWindow.classList.remove('hidden');
     input.focus();
 
-    // Initial welcome message with typing effect
     const welcomeLine = document.createElement('div');
     welcomeLine.className = 'bot-line';
     output.appendChild(welcomeLine);
@@ -76,9 +75,9 @@ document.addEventListener('DOMContentLoaded', function () {
       case 'design':
         return 'KeyBot: Looking to make your site design cohesive with your brand? We assist with front end development.';
       case 'Widgets':
-        return 'KeyBot: Have a widget idea? We can design customized widgets for your site.';
+        return 'KeyBot: Have a widget idea? We can provide custom code for your site.';
       case 'widgets':
-        return 'KeyBot: Have a widget idea? We can design customized widgets for your site.';
+        return 'KeyBot: Have a widget idea? We can provide custom code for your site.';
       case 'SEO':
         return 'KeyBot: Want help with your SEO? We assist in improving user experience and providing technical SEO support.';
       case 'seo':
