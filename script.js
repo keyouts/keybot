@@ -10,11 +10,16 @@ document.addEventListener('DOMContentLoaded', function () {
     chatWindow.classList.remove('hidden');
     input.focus();
 
+    // Initial welcome message with typing effect
     const welcomeLine = document.createElement('div');
     welcomeLine.className = 'bot-line';
     output.appendChild(welcomeLine);
 
-    typeText(welcomeLine, 'KeyBot: Type "help" for available commands.', 40);
+    typeText(
+      welcomeLine,
+      'KeyBot: Hello, want to know more about our services? Choose one of the following: Design • eCommerce • Widgets • SEO',
+      40
+    );
   });
 
   form.addEventListener('submit', (e) => {
