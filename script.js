@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.getElementById('toggleChat');
   const chatWindow = document.getElementById('devbot-window');
+  const closeChatBtn = document.getElementById('closeChatBtn');
   const form = document.getElementById('chat-form');
   const input = document.getElementById('user-input');
   const output = document.getElementById('chat-output');
 
   toggleButton.addEventListener('click', () => {
-    toggleButton.remove();
     chatWindow.classList.remove('hidden');
+    toggleButton.classList.add('hidden');
     input.focus();
 
     const welcomeLine = document.createElement('div');
@@ -19,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'KeyBot: Hello, want to know more about our services? Enter one of the following: Design • eCommerce • Widgets • SEO',
       40
     );
+  });
+
+  closeChatBtn.addEventListener('click', () => {
+    chatWindow.classList.add('hidden');
+    toggleButton.classList.remove('hidden');
   });
 
   form.addEventListener('submit', (e) => {
