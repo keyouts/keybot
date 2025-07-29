@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeText(
       welcomeLine,
-      'KeyBot: Hello, want to know more about our services? Choose one of the following: Design • eCommerce • Widgets • SEO',
+      'KeyBot: Hello, want to know more about our services? Enter one of the following: Design • eCommerce • Widgets • SEO',
       40
     );
   });
