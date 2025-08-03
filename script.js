@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeText(
       welcomeLine,
-      'KeyBot: Hello, want to know more about our services? Enter one of the following: Design • eCommerce • Widgets • SEO',
+      'KeyBot: Hello, want to know more about our services? Enter one of the following: Design • eCommerce • Widgets • SEO • Pricing',
       40
     );
   });
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cmd = command.toLowerCase();
     switch (cmd) {
       case 'list-services':
-        return 'KeyBot: Design • eCommerce • Widgets • SEO';
+        return 'KeyBot: Design • eCommerce • Widgets • SEO • Pricing';
       case 'eCommerce':
         return 'KeyBot: We provide assistance with setting up eCommerce sites, and migrating data to third party platforms like eBay and Etsy to reach more customers.';
       case 'ecommerce':
@@ -88,6 +88,10 @@ document.addEventListener('DOMContentLoaded', function () {
         return 'KeyBot: Want help with your SEO? We assist in improving user experience and providing technical SEO support.';
       case 'seo':
         return 'KeyBot: Want help with your SEO? We assist in improving user experience and providing technical SEO support.';
+      case 'Pricing':
+        return 'We offer structured, per hour pricing for small businesses not looking to commit to a contract.';
+      case 'pricing':
+        return 'We offer structured, per hour pricing for small businesses not looking to commit to a contract.';
       case 'Help':
         return 'KeyBot: Available commands: eCommerce, Design, Widgets, SEO';
       case 'help':
